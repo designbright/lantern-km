@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Lantern Design System Foundations</h1>
+      <p class="page-header__desc">A single-page reference for typography, colors, components, code snippets and Accessibility guidelines. Built for modern SaaS dashboards with semantic HTML and scalable CSS.</p>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <nav aria-label="Documentation sections">
+        <ul class="doc-nav-list">
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#colors">Color palette</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#inputs">Input fields</a></li>
+          <li><a href="#checkbox">Checkbox</a></li>
+          <li><a href="#radio">Radio</a></li>
+          <li><a href="#select">Select</a></li>
+          <li><a href="#textarea">Textarea</a></li>
+          <li><a href="#toggle">Toggle</a></li>
+          <li><a href="#card">Card</a></li>
+          <li><a href="#badge">Tag / Badge</a></li>
+          <li><a href="#spacing">Spacing scale</a></li>
+          <li><a href="#wireframes">Wireframes</a></li>
+          <li><a href="#example-app">Example app</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="doc-content">
+      <div class="container">
+
+        <!-- Typography -->
+        <section class="section" id="typography" aria-labelledby="typography-heading">
+          <h2 id="typography-heading">Typography</h2>
+          <p class="section-intro">Heading scale (Poppins) and body copy (DM Sans). Sizes scale fluidly across viewports.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block">
+              <h1 class="text-h1">Heading 1</h1>
+              <h2 class="text-h2">Heading 2</h2>
+              <h3 class="text-h3">Heading 3</h3>
+              <h4 class="text-h4">Heading 4</h4>
+              <h5 class="text-h5">Heading 5</h5>
+              <h6 class="text-h6">Heading 6</h6>
+              <p class="text-body">Body text: The quick brown fox jumps over the lazy dog. Use for paragraphs and default content.</p>
+              <p class="text-caption">Caption text: Supporting labels, hints, and metadata. Smaller and muted.</p>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;h1 class="text-h1"&gt;Heading 1&lt;/h1&gt;
+&lt;p class="text-body"&gt;Body text.&lt;/p&gt;
+&lt;p class="text-caption"&gt;Caption text.&lt;/p&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Ensure text meets 4.5:1 contrast ratio (AA) on its background.</li>
+              <li>Use semantic headings in order (h1 then h2, etc.).</li>
+              <li>Relative units (rem) support zoom and user font-size preferences.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual" style="color: var(--neutral-900); background: #fff; padding: var(--space-2); border-radius: var(--radius-sm);">Dark text on light background. Good contrast.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual" style="color: var(--neutral-400); background: #fff; padding: var(--space-2); border-radius: var(--radius-sm);">Gray text on light background. Poor contrast.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Color palette -->
+        <section class="section" id="colors" aria-labelledby="colors-heading">
+          <h2 id="colors-heading">Color palette</h2>
+          <p class="section-intro">Primary, secondary, and neutral scale for backgrounds and text.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <div class="color-grid">
+              <article class="swatch swatch--primary">
+                <span class="swatch__label">Primary</span>
+              </article>
+              <article class="swatch swatch--primary-hover">
+                <span class="swatch__label">Primary hover</span>
+              </article>
+              <article class="swatch swatch--secondary">
+                <span class="swatch__label">Secondary</span>
+              </article>
+              <article class="swatch swatch--neutral-50">
+                <span class="swatch__label">Neutral 50</span>
+              </article>
+              <article class="swatch swatch--neutral-100">
+                <span class="swatch__label">Neutral 100</span>
+              </article>
+              <article class="swatch swatch--neutral-200">
+                <span class="swatch__label">Neutral 200</span>
+              </article>
+              <article class="swatch swatch--neutral-400">
+                <span class="swatch__label">Neutral 400</span>
+              </article>
+              <article class="swatch swatch--neutral-600">
+                <span class="swatch__label">Neutral 600</span>
+              </article>
+              <article class="swatch swatch--neutral-800">
+                <span class="swatch__label">Neutral 800</span>
+              </article>
+              <article class="swatch swatch--neutral-900">
+                <span class="swatch__label">Neutral 900</span>
+              </article>
+            </div>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;article class="swatch swatch--primary"&gt;
+  &lt;span class="swatch__label"&gt;Primary&lt;/span&gt;
+&lt;/article&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Do not rely on color alone to convey meaning.</li>
+              <li>Ensure sufficient contrast for any text on each swatch.</li>
+              <li>Document which color combinations are approved for text and UI.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">Use text + color: e.g. "Primary" label on a colored swatch so meaning is clear without color alone.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Rely only on a colored dot or bar with no label; screen readers and color-blind users need text.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section" id="buttons" aria-labelledby="buttons-heading">
+          <h2 id="buttons-heading">Buttons</h2>
+          <p class="section-intro">Primary, secondary, and disabled variants. Minimum tap target on small screens.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block button-row">
+              <button type="button" class="btn btn--primary">Primary</button>
+              <button type="button" class="btn btn--secondary">Secondary</button>
+              <button type="button" class="btn btn--primary" disabled>Disabled</button>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;button type="button" class="btn btn--primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn--secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn--primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Minimum 44×44px touch target for interactive elements.</li>
+              <li>Visible focus indicator (focus ring) on keyboard focus.</li>
+              <li>Use <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> with a proper role; disabled buttons are not focusable.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">
+                  <button type="button" class="btn btn--primary" style="min-height: 2.75rem; box-shadow: var(--shadow-focus);">Primary</button>
+                  <p style="margin: var(--space-2) 0 0; font-size: 0.75rem;">Large tap target, visible focus ring.</p>
+                </div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">
+                  <button type="button" class="btn btn--primary" style="min-height: 1.5rem; padding: 0.15rem 0.5rem; font-size: 0.7rem;">Tiny</button>
+                  <p style="margin: var(--space-2) 0 0; font-size: 0.75rem;">Too small; no focus style.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Input fields -->
+        <section class="section" id="inputs" aria-labelledby="inputs-heading">
+          <h2 id="inputs-heading">Input fields</h2>
+          <p class="section-intro">Default, focus, and error states. Each input has an associated label.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block input-demos">
+              <div class="input-group">
+                <label for="input-default">Default</label>
+                <input type="text" id="input-default" class="input" placeholder="Placeholder text">
+              </div>
+              <div class="input-group">
+                <label for="input-focus">Focus (tab to focus)</label>
+                <input type="text" id="input-focus" class="input" placeholder="Focus me" autocomplete="off">
+              </div>
+              <div class="input-group">
+                <label for="input-error">Error</label>
+                <input type="text" id="input-error" class="input input--error" placeholder="Invalid value" aria-invalid="true">
+                <span class="input-error-msg">This field is required.</span>
+              </div>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="input-group"&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="text" id="email" class="input" placeholder="you@example.com"&gt;
+&lt;/div&gt;
+&lt;!-- Error state: add class="input--error", aria-invalid="true", and error message --&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Every input must have a visible <code>&lt;label&gt;</code> associated via <code>for</code> and <code>id</code>.</li>
+              <li>Error state: use <code>aria-invalid="true"</code> and descriptive error text.</li>
+              <li>Visible focus style so users can see which field is focused.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">
+                  <div class="input-group">
+                    <label for="wcag-do-email">Email</label>
+                    <input type="text" id="wcag-do-email" class="input" placeholder="you@example.com" readonly tabindex="-1">
+                  </div>
+                </div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">
+                  <input type="text" class="input" placeholder="Email (no label)" readonly tabindex="-1" aria-label="Demo only">
+                  <p style="margin: var(--space-1) 0 0; font-size: 0.75rem;">Placeholder only; no visible label.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Checkbox -->
+        <section class="section" id="checkbox" aria-labelledby="checkbox-heading">
+          <h2 id="checkbox-heading">Checkbox</h2>
+          <p class="section-intro">Single and multiple choice with clear labels. Use a fieldset and legend for groups.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block">
+              <div class="input-group mb-4">
+                <div class="checkbox-row">
+                  <input type="checkbox" id="terms" class="checkbox">
+                  <label for="terms">I agree to the terms and conditions</label>
+                </div>
+              </div>
+              <fieldset>
+                <legend>Notify me by</legend>
+                <div class="checkbox-group mt-2">
+                  <div class="checkbox-row">
+                    <input type="checkbox" id="notify-email" class="checkbox" name="notify">
+                    <label for="notify-email">Email</label>
+                  </div>
+                  <div class="checkbox-row">
+                    <input type="checkbox" id="notify-sms" class="checkbox" name="notify">
+                    <label for="notify-sms">SMS</label>
+                  </div>
+                  <div class="checkbox-row">
+                    <input type="checkbox" id="notify-push" class="checkbox" name="notify">
+                    <label for="notify-push">Push</label>
+                  </div>
+                </div>
+              </fieldset>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="checkbox-row"&gt;
+  &lt;input type="checkbox" id="terms" class="checkbox"&gt;
+  &lt;label for="terms"&gt;I agree to the terms&lt;/label&gt;
+&lt;/div&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Notify me by&lt;/legend&gt;
+  &lt;div class="checkbox-group"&gt;...&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Every checkbox has a visible label associated via <code>for</code> and <code>id</code>.</li>
+              <li>Use <code>fieldset</code> and <code>legend</code> for checkbox groups.</li>
+              <li>Visible focus indicator; adequate touch target size.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">Label each checkbox; group related options in a fieldset with a legend.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Use unlabeled checkboxes or multiple groups without a legend.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Radio -->
+        <section class="section" id="radio" aria-labelledby="radio-heading">
+          <h2 id="radio-heading">Radio</h2>
+          <p class="section-intro">Single-choice groups. Use one radio group per question and a fieldset with legend.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block">
+              <fieldset>
+                <legend>Delivery method</legend>
+                <div class="radio-group mt-2">
+                  <div class="radio-row">
+                    <input type="radio" id="delivery-standard" class="radio" name="delivery" value="standard">
+                    <label for="delivery-standard">Standard</label>
+                  </div>
+                  <div class="radio-row">
+                    <input type="radio" id="delivery-express" class="radio" name="delivery" value="express">
+                    <label for="delivery-express">Express</label>
+                  </div>
+                  <div class="radio-row">
+                    <input type="radio" id="delivery-sameday" class="radio" name="delivery" value="sameday">
+                    <label for="delivery-sameday">Same day</label>
+                  </div>
+                </div>
+              </fieldset>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;fieldset&gt;
+  &lt;legend&gt;Delivery method&lt;/legend&gt;
+  &lt;div class="radio-group"&gt;
+    &lt;div class="radio-row"&gt;
+      &lt;input type="radio" id="opt1" class="radio" name="delivery" value="standard"&gt;
+      &lt;label for="opt1"&gt;Standard&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Every radio has a visible label; group related options in a fieldset with legend.</li>
+              <li>Use the same <code>name</code> for all options in one group.</li>
+              <li>Visible focus indicator; adequate touch target size.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">One fieldset per question; one <code>name</code> per group; every option labeled.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Ungrouped radios, missing labels, or multiple names in one visual group.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Select -->
+        <section class="section" id="select" aria-labelledby="select-heading">
+          <h2 id="select-heading">Select</h2>
+          <p class="section-intro">Native dropdown styled to match the design system. Use for a single choice from a list.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block input-demos">
+              <div class="input-group">
+                <label for="country">Country</label>
+                <select id="country" class="select">
+                  <option value="">Select a country</option>
+                  <option value="us">United States</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="ca">Canada</option>
+                </select>
+              </div>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="input-group"&gt;
+  &lt;label for="country"&gt;Country&lt;/label&gt;
+  &lt;select id="country" class="select"&gt;
+    &lt;option value=""&gt;Select a country&lt;/option&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Associate a visible <code>label</code> with the select via <code>for</code> and <code>id</code>.</li>
+              <li>Visible focus indicator; ensure sufficient contrast for options.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">Label the select so users know what they're choosing.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Use an unlabeled dropdown or rely only on placeholder text.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Textarea -->
+        <section class="section" id="textarea" aria-labelledby="textarea-heading">
+          <h2 id="textarea-heading">Textarea</h2>
+          <p class="section-intro">Multi-line text input for long-form content. Same focus and error patterns as text input.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block input-demos">
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="textarea" rows="4" placeholder="Enter your message..."></textarea>
+              </div>
+              <div class="input-group">
+                <label for="message-error">Message (error)</label>
+                <textarea id="message-error" class="textarea textarea--error" rows="3" placeholder="Required" aria-invalid="true"></textarea>
+                <span class="textarea-error-msg">This field is required.</span>
+              </div>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="input-group"&gt;
+  &lt;label for="message"&gt;Message&lt;/label&gt;
+  &lt;textarea id="message" class="textarea" rows="4" placeholder="..."&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Every textarea has a visible label; use <code>aria-invalid</code> and error text when invalid.</li>
+              <li>Visible focus indicator; allow resize if it helps users (e.g. <code>resize: vertical</code>).</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">Label the textarea; show clear error message when validation fails.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Rely only on placeholder as the label.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Toggle -->
+        <section class="section" id="toggle" aria-labelledby="toggle-heading">
+          <h2 id="toggle-heading">Toggle</h2>
+          <p class="section-intro">On/off switch built with a checkbox. No JavaScript required; state is native.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block">
+              <div class="toggle-row">
+                <input type="checkbox" id="notifications" class="toggle" role="switch">
+                <label for="notifications">Enable notifications</label>
+              </div>
+              <div class="toggle-row mt-3">
+                <input type="checkbox" id="darkmode" class="toggle" role="switch">
+                <label for="darkmode">Dark mode</label>
+              </div>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="toggle-row"&gt;
+  &lt;input type="checkbox" id="notifications" class="toggle" role="switch"&gt;
+  &lt;label for="notifications"&gt;Enable notifications&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Use a visible label; <code>role="switch"</code> exposes the control to assistive tech.</li>
+              <li>Visible focus indicator; adequate touch target for the switch.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">Label the toggle so users know what it controls.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Use an unlabeled switch or rely on color alone for state.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Card -->
+        <section class="section" id="card" aria-labelledby="card-heading">
+          <h2 id="card-heading">Card</h2>
+          <p class="section-intro">Container with shadow and padding. Use for dashboard tiles and content blocks.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <div class="card-row">
+              <article class="card">
+                <h3 class="card__title">Card title</h3>
+                <p class="card__body">Card body content. Layout reflows on narrow viewports.</p>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Card with actions</h3>
+                <p class="card__body">Use when a card needs primary and secondary actions.</p>
+                <div class="card__actions">
+                  <button type="button" class="btn btn--primary">Primary</button>
+                  <button type="button" class="btn btn--secondary">Secondary</button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;article class="card"&gt;
+  &lt;h3 class="card__title"&gt;Card title&lt;/h3&gt;
+  &lt;p class="card__body"&gt;Card body content.&lt;/p&gt;
+  &lt;div class="card__actions"&gt;
+    &lt;button type="button" class="btn btn--primary"&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn--secondary"&gt;Secondary&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Focus order should follow the visual content order.</li>
+              <li>If the whole card is clickable, use a single focusable element (e.g. link or button).</li>
+              <li>Ensure sufficient contrast for all text inside the card.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">One focusable element per card (e.g. a link wrapping the card or a single "View" button). Clear heading and contrast.</div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">Multiple ungrouped links/buttons inside one card with no clear order, or low-contrast text.</div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Tag / Badge -->
+        <section class="section" id="badge" aria-labelledby="badge-heading">
+          <h2 id="badge-heading">Tag / Badge</h2>
+          <p class="section-intro">Pill-style labels for status, categories, or counts.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <article class="demo-block badge-row">
+              <span class="badge badge--primary">Primary</span>
+              <span class="badge badge--secondary">Secondary</span>
+              <span class="badge badge--neutral">Neutral</span>
+            </article>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;span class="badge badge--primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge--secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge--neutral"&gt;Neutral&lt;/span&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Use badges for supplementary info, not critical content alone.</li>
+              <li>Ensure contrast between badge background and text.</li>
+              <li>Prefer text + color; do not rely on color alone to convey meaning.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual">
+                  <span class="badge badge--primary">Active</span>
+                  <p style="margin: var(--space-2) 0 0; font-size: 0.75rem;">Text + color: "Active" is clear.</p>
+                </div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual">
+                  <span style="display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--color-primary);" aria-hidden="true"></span>
+                  <p style="margin: var(--space-2) 0 0; font-size: 0.75rem;">Color-only dot; no text or label.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Spacing scale -->
+        <section class="section" id="spacing" aria-labelledby="spacing-heading">
+          <h2 id="spacing-heading">Spacing scale</h2>
+          <p class="section-intro">Consistent spacing tokens. Boxes below show padding at each step.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <div class="spacing-grid">
+              <article class="spacing-demo" style="padding: var(--space-1);">
+                <span class="spacing-demo__label">space-1</span>
+              </article>
+              <article class="spacing-demo" style="padding: var(--space-2);">
+                <span class="spacing-demo__label">space-2</span>
+              </article>
+              <article class="spacing-demo" style="padding: var(--space-3);">
+                <span class="spacing-demo__label">space-3</span>
+              </article>
+              <article class="spacing-demo" style="padding: var(--space-4);">
+                <span class="spacing-demo__label">space-4</span>
+              </article>
+              <article class="spacing-demo" style="padding: var(--space-5);">
+                <span class="spacing-demo__label">space-5</span>
+              </article>
+              <article class="spacing-demo" style="padding: var(--space-6);">
+                <span class="spacing-demo__label">space-6</span>
+              </article>
+            </div>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>/* Use CSS variables in your styles */
+padding: var(--space-3);
+margin-bottom: var(--space-4);
+gap: var(--space-2);</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>Consistent spacing improves readability and reduces cognitive load.</li>
+              <li>Use adequate spacing between interactive elements to avoid accidental taps or clicks.</li>
+              <li>Avoid cramping controls; touch targets benefit from the spacing scale.</li>
+            </ul>
+            <div class="wcag-do-dont">
+              <div class="wcag-do-dont__item wcag-do-dont__do">
+                <span class="wcag-do-dont__label">Do</span>
+                <div class="wcag-do-dont__visual" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                  <button type="button" class="btn btn--primary" tabindex="-1">Save</button>
+                  <button type="button" class="btn btn--secondary" tabindex="-1">Cancel</button>
+                  <p style="margin: var(--space-2) 0 0; width: 100%; font-size: 0.75rem;">Comfortable gap between buttons.</p>
+                </div>
+              </div>
+              <div class="wcag-do-dont__item wcag-do-dont__dont">
+                <span class="wcag-do-dont__label">Don't</span>
+                <div class="wcag-do-dont__visual" style="display: flex; gap: 2px;">
+                  <button type="button" class="btn btn--primary" style="padding: 0.2rem 0.4rem; font-size: 0.7rem;" tabindex="-1">Save</button>
+                  <button type="button" class="btn btn--secondary" style="padding: 0.2rem 0.4rem; font-size: 0.7rem;" tabindex="-1">Cancel</button>
+                  <p style="margin: var(--space-2) 0 0; width: 100%; font-size: 0.75rem;">Cramped; easy to mis-tap.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Wireframes -->
+        <section class="section" id="wireframes" aria-labelledby="wireframes-heading">
+          <h2 id="wireframes-heading">Wireframes</h2>
+          <p class="section-intro">Low-fidelity layout sketches. Use these patterns to plan structure before applying components and color.</p>
+          <p class="section-intro"><a href="cancer-care.html" target="_blank" rel="noopener noreferrer">View full-page wireframe example: Cancer Care (Figma)</a></p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <div class="wireframe-demo">
+              <header class="wireframe-demo__bar">App bar / Header</header>
+              <div class="wireframe-demo__body">
+                <nav class="wireframe-demo__side">Nav / Sidebar</nav>
+                <main class="wireframe-demo__main">
+                  <div class="wireframe-demo__block">Card 1</div>
+                  <div class="wireframe-demo__block">Card 2</div>
+                  <div class="wireframe-demo__block">Card 3</div>
+                </main>
+              </div>
+            </div>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="wireframe-demo"&gt;
+  &lt;header class="wireframe-demo__bar"&gt;App bar&lt;/header&gt;
+  &lt;div class="wireframe-demo__body"&gt;
+    &lt;nav class="wireframe-demo__side"&gt;Sidebar&lt;/nav&gt;
+    &lt;main class="wireframe-demo__main"&gt;
+      &lt;div class="wireframe-demo__block"&gt;Card 1&lt;/div&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <!-- Example application -->
+        <section class="section" id="example-app" aria-labelledby="example-app-heading">
+          <h2 id="example-app-heading">Example application</h2>
+          <p class="section-intro">A static mock of how components combine in a dashboard. All elements use this design system.</p>
+          <span class="doc-label">Example</span>
+          <div class="doc-demo mt-2">
+            <div class="example-app">
+              <header class="example-app__bar">
+                <h3 class="example-app__title">Dashboard</h3>
+                <button type="button" class="btn btn--primary">New item</button>
+              </header>
+              <div class="example-app__main">
+                <div class="card-row">
+                  <article class="card">
+                    <h3 class="card__title">Overview</h3>
+                    <p class="card__body">Summary and key metrics. Built with card, card__title, and card__body.</p>
+                    <span class="badge badge--primary">Active</span>
+                  </article>
+                  <article class="card">
+                    <h3 class="card__title">Recent activity</h3>
+                    <p class="card__body">List or table content goes here. Uses the same card component.</p>
+                  </article>
+                  <article class="card">
+                    <h3 class="card__title">Actions</h3>
+                    <p class="card__body">Use card__actions for primary and secondary buttons.</p>
+                    <div class="card__actions">
+                      <button type="button" class="btn btn--primary">Save</button>
+                      <button type="button" class="btn btn--secondary">Cancel</button>
+                    </div>
+                  </article>
+                </div>
+                <div class="example-app__form mt-4">
+                  <div class="input-group">
+                    <label for="example-app-filter">Filter</label>
+                    <select id="example-app-filter" class="select">
+                      <option value="">All items</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="doc-label mt-4">Code</span>
+          <pre class="code-block mt-2"><code>&lt;div class="example-app"&gt;
+  &lt;header class="example-app__bar"&gt;
+    &lt;h3 class="example-app__title"&gt;Dashboard&lt;/h3&gt;
+    &lt;button class="btn btn--primary"&gt;New item&lt;/button&gt;
+  &lt;/header&gt;
+  &lt;div class="example-app__main"&gt;
+    &lt;article class="card"&gt;
+      &lt;h3 class="card__title"&gt;Title&lt;/h3&gt;
+      &lt;p class="card__body"&gt;...&lt;/p&gt;
+      &lt;div class="card__actions"&gt;
+        &lt;button class="btn btn--primary"&gt;Save&lt;/button&gt;
+        &lt;button class="btn btn--secondary"&gt;Cancel&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <aside class="wcag-callout mt-4" aria-label="Accessibility notes">
+            <h3 class="wcag-callout__title">Accessibility (WCAG)</h3>
+            <ul>
+              <li>In a real app, use landmarks (banner, main, navigation) and a logical heading order.</li>
+              <li>Ensure focus order follows the visual layout and that all interactive elements are keyboard accessible.</li>
+            </ul>
+          </aside>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
